@@ -1,0 +1,21 @@
+redis-ha:
+  enabled: false
+
+controller:
+  enableStatefulSet: true
+
+server:
+  certificate:
+    domain: argocd.sandpit1.learncmd.com.au
+  ingress:
+    enabled: true
+    ingressClassName: nginx
+    hosts: argocd.sandpit1.learncmd.com.au
+  autoscaling:
+    enabled: true
+    minReplicas: 1
+
+repoServer:
+  autoscaling:
+    enabled: true
+    minReplicas: 1
